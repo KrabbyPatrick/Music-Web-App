@@ -1,0 +1,433 @@
+:root {
+	--primaryColor: #0e505ee6;
+	--secondaryColor: #27afcee6;
+	--tertiaryColor: #1d1d1d;
+	--fourthColor: #f2f2f2;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	margin: 0;
+	font-family: Lato, sans-serif;
+	color: #222;
+	font-size: 0.9em;
+}
+
+main {
+	flex: 1 0 auto;
+	/* flex: 1 0 0; di ba pwedeng ganito? */
+	display: flex;
+}
+
+aside {
+	flex: 0 0 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	background: var(--fourthColor);
+}
+
+aside div,
+aside div {
+	font-size: 0.9em;
+	/* flex: 1 0 0; */
+	/* align-items: center; */
+	/* display: block; */
+	/* width: 20px; */
+	width: 40px;
+	flex: 1 0 0;
+	/* justify-content: center; */
+	/* position: relative; */
+	display: flex;
+}
+
+aside i.fas,
+aside i.fab {
+	margin: auto;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+	/* flex: 1 1 0; di ba pwedeng ganito? */
+}
+
+.music-head {
+	flex: 0 0 220px;
+	display: flex;
+	padding: 40px;
+	background-color: var(--tertiaryColor);
+}
+
+.music-head img {
+	height: 200px;
+}
+
+.catty-music {
+	flex: 1 1 auto;
+	/* why do we need this?^^ */
+	display: flex;
+	flex-direction: column;
+	font-weight: 300;
+	color: #fff;
+	padding-left: 50px;
+	/* background-color: red; */
+	cursor: default;
+}
+
+.catty-music div i {
+	cursor: default;
+}
+
+.catty-music div:nth-child(1) {
+	margin-bottom: auto;
+	/* background-color: blue; */
+}
+
+.catty-music div:nth-child(2) {
+	margin-top: 0;
+}
+
+.catty-music div:nth-child(2) i.fas {
+	font-size: 0.9em;
+	padding: 0 0.7em;
+	font-weight: 600;
+}
+
+.catty-music div:nth-child(1) p:first-child {
+	font-size: 1.8em;
+	margin: 0 0 10px;
+	/* background-color: green; */
+}
+
+.catty-music div:nth-child(1) p:not(:first-child) {
+	font-size: 0.9em;
+	margin: 2px 0;
+}
+
+.follow {
+	display: inline-block;
+	/* background-color: rgba(39, 175, 206, 0.9); */
+	box-sizing: border-box;
+	padding: 2px 15px;
+	border: solid var(--secondaryColor) 1.5px;
+	border-radius: 20px;
+	margin-right: 10px;
+}
+
+.music-list {
+	flex: 1 0 auto;
+	/* flex: 1 0 0; di ba pwedeng ganito? */
+	list-style-type: none;
+	padding: 5px 10px 0px;
+}
+
+li {
+	display: flex;
+	padding: 0 20px;
+	min-height: 50px;
+	border-radius: 15px;
+}
+
+li p {
+	align-items: center;
+}
+
+li .number {
+	flex: 0 0 40px;
+}
+
+li .title,
+li .artist,
+li .time,
+li .syn {
+	flex: 1 0 0;
+	/* flex: 1 0 0; di ba pwedeng ganito? */
+}
+
+li span.catty-cloud {
+	border: 1px solid black;
+	font-size: 0.6em;
+	padding: 3px;
+}
+
+li .more {
+	display: none;
+}
+
+li {
+	background: white;
+	margin-bottom: 1px;
+}
+
+li:nth-last-child(2n) {
+	background-color: var(--fourthColor);
+}
+
+footer {
+	flex: 0 0 90px;
+	padding: 10px;
+	color: #fff;
+	background-color: var(--primaryColor);
+	display: flex;
+}
+
+.playing {
+	/* background-color: blanchedalmond; */
+	flex: 1 0 auto;
+	display: flex;
+}
+
+.playing img {
+	height: 90px;
+}
+
+.playing div {
+	margin-left: 20px;
+	margin-right: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.playing div p {
+	margin: 0;
+	color: white;
+}
+
+.playing div p:nth-child(1) {
+	font-size: 2em;
+}
+
+.player {
+	/* background-color: burlywood; */
+	flex: 0 0 500px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.player i {
+	/* background-color: coral; */
+	width: 90px;
+	/* height: 100%; */
+	padding-top: 40px;
+	padding-bottom: 40px;
+	text-align: center;
+	font-size: 1.2rem;
+}
+
+.player i:hover {
+	background-color: rgba(0, 0, 0, 0.054);
+	color: rgba(255, 255, 255, 0.659);
+}
+
+@media screen and (max-width: 900px) {
+	.catty-music div p {
+		/* color: blue; */
+	}
+
+	.music-head {
+		flex: 0 0 200px;
+	}
+
+	.music-head img {
+		height: 175px;
+	}
+
+	.music-list li {
+		padding-right: 0;
+	}
+
+	.music-list li p {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	.music-list li .title {
+		font-size: 1.2rem;
+	}
+
+	li {
+		/* min-height: 100px; */
+		align-items: center;
+	}
+
+	li .artist {
+		display: none;
+	}
+
+	/* ARTIST */
+
+	.music-list .title::after {
+		/* background-color: yellow; */
+		display: block;
+		font-size: 0.9rem;
+	}
+
+	#one .title::after {
+		content: 'Justin Beiber, Quavo';
+	}
+
+	#two .title::after {
+		content: "Why Don't We";
+	}
+
+	#three .title::after {
+		content: 'Diplo, Jonas Brothers';
+	}
+
+	#four .title::after {
+		content: 'Harry Styles';
+	}
+
+	#five .title::after {
+		content: 'Post Malone';
+	}
+
+	#six .title::after {
+		content: 'PUBLIC';
+	}
+
+	/* TIME */
+	li .time {
+		text-align: right;
+	}
+
+	/* REMOVE CATTY CLOUD SYNC */
+	li .sync {
+		display: none;
+	}
+
+	li .more {
+		display: inline-block;
+		flex: 0 0 60px;
+		text-align: center;
+		/* padding-right: 20px; */
+	}
+
+	footer {
+		/* flex: wrap; */
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	footer .playing {
+		/* display: none; */
+		justify-content: center;
+		font-size: 80%;
+	}
+
+	footer .playing img {
+		height: 50px;
+	}
+
+	footer .player {
+		/* height: 200px; */
+		flex: 0 0 auto;
+		justify-content: center;
+	}
+
+	footer .player i.fas {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.catty-music div p {
+		/* color: red; */
+	}
+
+	.music-head {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		flex: 0 0 150px;
+	}
+
+	.music-head img {
+		height: 150px;
+		width: auto;
+	}
+
+	/* .music-head .catty-music {
+		flex: 0 0 150px;
+	} */
+
+	.catty-music {
+		font-size: 75%;
+		padding-left: 10px;
+	}
+
+	.catty-music div:nth-child(2) {
+		display: flex;
+		justify-content: space-around;
+		font-size: 2em;
+		/* flex-direction: column; */
+	}
+
+	.catty-music div:nth-child(2) i.fas {
+		padding: 5px;
+	}
+
+	.catty-music div:nth-child(2) i.fas span {
+		display: none;
+	}
+
+	.music-list li .time {
+		flex: 0 0 60px;
+	}
+}
+
+/* HOVER */
+
+aside div:hover {
+	color: var(--secondaryColor);
+	background-color: rgba(0, 0, 0, 0.768);
+}
+
+.follow:hover {
+	background-color: rgba(39, 175, 206, 0.9);
+	/* cursor: default; */
+}
+
+.catty-music div i:hover {
+	color: var(--secondaryColor);
+	/* cursor: default; */
+}
+
+.music-list li:hover {
+	color: var(--secondaryColor);
+	font-weight: bolder;
+	box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.306);
+	transform: scale(1);
+	z-index: 1;
+}
+
+.music-list p:hover {
+	cursor: default;
+}
+
+.music-list .artist:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/* TRANSITIONS */
+
+.follow,
+.catty-music div i {
+	transition: all 0.3s ease 0s;
+}
+
+.music-list li {
+	transition: box-shadow 0.2s linear 0s;
+}
